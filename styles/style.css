@@ -68,6 +68,10 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 11rem;
+  /* the full-bleed 100vw elements (.header::before, .section--with-bg::before,
+     .navigation) include the vertical scrollbar's width; clip that overflow.
+     `clip` instead of `hidden` so the sticky header keeps working. */
+  overflow-x: clip;
 }
 
 body,
